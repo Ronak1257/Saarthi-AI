@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import API from "../api";
 
-export default function Dashboard() {
+export default function Dashboard({ onLogout }) {
   const [shortGoal, setShortGoal] = useState("");
   const [longGoal, setLongGoal] = useState("");
   const [message, setMessage] = useState("");
@@ -77,8 +77,16 @@ export default function Dashboard() {
                 Saarthi AI
               </h1>
             </div>
-            <div className="text-sm text-gray-500">
-              Your AI Learning Companion
+            <div className="flex items-center space-x-4">
+              <div className="text-sm text-gray-500">
+                Your AI Learning Companion
+              </div>
+              <button
+                onClick={onLogout}
+                className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200"
+              >
+                Logout
+              </button>
             </div>
           </div>
         </div>
