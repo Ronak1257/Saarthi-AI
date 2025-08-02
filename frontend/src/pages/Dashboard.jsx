@@ -20,10 +20,7 @@ export default function Dashboard() {
         long_term_goal: longGoal
       });
       // Show success feedback using a state variable instead of alert
-      setMessage("Goals saved successfully!");
-      setTimeout(() => {
-        setMessage("");
-      }, 2000);
+      alert("Goals saved successfully!");
     } catch (error) {
       console.error("Error saving goals:", error);
     } finally {
